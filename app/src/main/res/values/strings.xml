@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="api_link"><![CDATA[http://api.themoviedb.org/3/discover/movie?api_key=b3b1492d3e91e9f9403a2989f3031b0c&primary_release_year=2017&sort_by=popularity.desc]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

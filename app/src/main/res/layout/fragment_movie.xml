@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@android:color/white"
+    tools:context="dev.agbaria.androidtest.MovieFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivImage"
+        android:src="@android:color/black"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:layout_toRightOf="@id/ivImage"
+        android:text="Movie Name"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1"
+        android:text="rating: "
+        android:layout_toRightOf="@id/ivImage"
+        android:layout_below="@id/tvName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRating"
+        android:text="10"
+        android:layout_toRightOf="@id/tv1"
+        android:layout_below="@id/tvName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvGenres"
+        android:text="genres...."
+        android:layout_toRightOf="@id/ivImage"
+        android:layout_below="@id/tv1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvOverview"
+        android:layout_below="@id/ivImage"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
