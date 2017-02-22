@@ -16,16 +16,17 @@ import java.util.ArrayList;
 import static dev.agbaria.androidtest.Utils.getGenres;
 
 /**
- * Created by ANDROID on 21/02/2017.
+ * Created by agbaria on 21/02/2017.
+ *
  */
 
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
+class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
     private LayoutInflater inflater;
     private Activity activity;
     private ArrayList<Movie> movies;
 
-    public MovieAdapter(ArrayList<Movie> movies, Activity activity) {
+    MovieAdapter(ArrayList<Movie> movies, Activity activity) {
         this.inflater = LayoutInflater.from(activity);
         this.activity = activity;
         this.movies = movies;
@@ -41,7 +42,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, int position) {
         final Movie movie = movies.get(position);
         String url = "http://image.tmdb.org/t/p/w185/" + movie.getBackdrop_path() + "?api_key=b3b1492d3e91e9f9403a2989f3031b0c";
-        Picasso.with(activity).load(url).resize(250, 250).into(holder.image);
+        Picasso.with(activity).load(url).resize(150, 150).into(holder.image);
         holder.title.setText(movie.getTitle());
         holder.rating.setText(movie.getVote_average());
         holder.genres.setText(getGenres(movie.getGenre_ids()));
@@ -49,7 +50,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             @Override
             public void onClick(View view) {
                 MovieFragment fragment = MovieFragment.getInstance(movie);
-                activity.getFragmentManager().beginTransaction().replace(R.id.content_main, fragment)
+                activity.getFragmentManager().beginTransaction().add(R.id.content_main, fragment)
                         .addToBackStack(null).commit();
             }
         });
@@ -68,7 +69,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         TextView genres;
         RelativeLayout layout;
 
-        public ViewHolder(View v) {
+        ViewHolder(View v) {
             super(v);
 
             image = (ImageView) v.findViewById(R.id.ivImage);

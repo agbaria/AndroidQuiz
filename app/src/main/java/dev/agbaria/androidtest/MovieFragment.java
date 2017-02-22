@@ -50,7 +50,7 @@ public class MovieFragment extends Fragment {
 
         ImageView imageView = (ImageView) v.findViewById(R.id.ivImage);
         String url = "http://image.tmdb.org/t/p/w185/" + movie.getPoster_path() + "?api_key=b3b1492d3e91e9f9403a2989f3031b0c";
-        Picasso.with(getActivity()).load(url).resize(400, 600).into(imageView);
+        Picasso.with(getActivity()).load(url).resize(200, 300).into(imageView);
 
         ((TextView) v.findViewById(R.id.tvName)).setText(movie.getTitle());
         ((TextView) v.findViewById(R.id.tvRating)).setText(movie.getVote_average());

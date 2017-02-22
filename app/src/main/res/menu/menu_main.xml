@@ -2,9 +2,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="dev.agbaria.androidtest.MainActivity">
+
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/action_email"
+        android:title="@string/email"
+        android:icon="@mipmap/ic_email"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_call"
+        android:title="@string/action_call"
+        android:icon="@mipmap/ic_call"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_gps"
+        android:title="@string/action_gps"
+        android:icon="@mipmap/ic_gps"
+        app:showAsAction="always" />
 </menu>

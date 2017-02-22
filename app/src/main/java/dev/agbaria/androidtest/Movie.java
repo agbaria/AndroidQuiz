@@ -3,7 +3,8 @@ package dev.agbaria.androidtest;
 import java.io.Serializable;
 
 /**
- * Created by ANDROID on 21/02/2017.
+ * Created by agbaria on 21/02/2017.
+ *
  */
 
 public class Movie implements Serializable {
